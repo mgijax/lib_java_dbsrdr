@@ -96,10 +96,26 @@ public class CloneLoadCfg extends Configurator
     {
         return getConfigString("LOGICAL_DB_SEQ");
     }
+
+    /**
+     * Get the value of the PRIVATE_ACC configuration parameter.
+     * @assumes Nothing
+     * @effects Nothing
+     * @param None
+     * @return The configuration value
+     * @throws ConfigException if the value is not found
+     */
+    public String getPrivateAcc () throws ConfigException
+    {
+        return getConfigString("PRIVATE_ACC");
+    }
 }
 
 
 //  $Log$
+//  Revision 1.4  2003/06/25 16:59:18  dbm
+//  Removed get methods for ORGANISM and DERIVED_FROM_ID.
+//
 //  Revision 1.3  2003/05/13 18:48:47  dbm
 //  Fixed javadocs
 //
