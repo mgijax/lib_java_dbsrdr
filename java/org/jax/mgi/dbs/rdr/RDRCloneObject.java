@@ -42,14 +42,6 @@ public class RDRCloneObject
     //
     protected String cloneLibrary;
 
-    // The value for the segmentType column in the RADAR database.
-    //
-    protected String segmentType;
-
-    // The value for the vectorType column in the RADAR database.
-    //
-    protected String vectorType;
-
     // The value for the jnumID column in the RADAR database.
     //
     protected String jNumber;
@@ -112,26 +104,6 @@ public class RDRCloneObject
      * @throws Nothing
      */
     public String getCloneLibrary () { return cloneLibrary; }
-
-    /**
-     * Get the segmentType attribute from this object.
-     * @assumes Nothing
-     * @effects Nothing
-     * @param None
-     * @return The segmentType attribute
-     * @throws Nothing
-     */
-    public String getSegmentType () { return segmentType; }
-
-    /**
-     * Get the vectorType attribute from this object.
-     * @assumes Nothing
-     * @effects Nothing
-     * @param None
-     * @return The vectorType attribute
-     * @throws Nothing
-     */
-    public String getVectorType () { return vectorType; }
 
     /**
      * Get the jNumber attribute from this object.
@@ -224,26 +196,6 @@ public class RDRCloneObject
     public void setCloneLibrary (String pCloneLibrary) { cloneLibrary = pCloneLibrary; }
 
     /**
-     * Set the segmentType attribute of this object to the given value.
-     * @assumes Nothing
-     * @effects Nothing
-     * @param pSegmentType value to set the attribute to
-     * @return Nothing
-     * @throws Nothing
-     */
-    public void setSegmentType (String pSegmentType) { segmentType = pSegmentType; }
-
-    /**
-     * Set the vectorType attribute of this object to the given value.
-     * @assumes Nothing
-     * @effects Nothing
-     * @param pVectorType value to set the attribute to
-     * @return Nothing
-     * @throws Nothing
-     */
-    public void setVectorType (String pVectorType) { vectorType = pVectorType; }
-
-    /**
      * Set the jNumber attribute of this object to the given value.
      * @assumes Nothing
      * @effects Nothing
@@ -296,6 +248,9 @@ public class RDRCloneObject
 
 
 //  $Log$
+//  Revision 1.4  2003/07/07 16:27:48  dbm
+//  Added privateAcc attribute.
+//
 //  Revision 1.3  2003/06/25 17:00:26  dbm
 //  Removed support for organism and derivedFromID.
 //
