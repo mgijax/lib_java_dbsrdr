@@ -46,6 +46,19 @@ public class RADARCfg extends Configurator
     }
 
     /**
+     * Get the name of the job stream.
+     * @assumes Nothing
+     * @effects Nothing
+     * @param None
+     * @return The configuration value
+     * @throws ConfigException if the value is not found
+     */
+    public String getJobStreamName () throws ConfigException
+    {
+        return getConfigString("JOBSTREAM");
+    }
+
+    /**
      * Get the J-Number associated with the load.
      * @assumes Nothing
      * @effects Nothing
@@ -100,6 +113,12 @@ public class RADARCfg extends Configurator
 
 
 //  $Log$
+//  Revision 1.1.6.1  2005/01/24 14:31:15  dbm
+//  Added getJobStreamName()
+//
+//  Revision 1.1  2003/11/25 15:02:54  dbm
+//  Initial version
+//
 //
 /**************************************************************************
 *
