@@ -1,3 +1,9 @@
+TAG: lib_java_dbsrdr-1-0-14
+DATE: 10/12/2004
+STAFF: dbm
+RELEASE: development
+CHANGES: Removed QC_cDNALoad_MGI_IMAGE_Discrep from generatedTables.txt
+
 TAG: lib_java_dbsrdr-1-0-13
 DATE: 07/29/2004
 STAFF: dbm
