@@ -3,6 +3,8 @@ MGI_CloneLoad_Accession
 MGI_CloneLoad_Clone
 QC_MS_AttrEdit
 QC_MS_NameConflict
+QC_MS_UnresolvedOrganism
+QC_MS_ChangedLibrary
 QC_SEQ_OldRef
 QC_SEQ_RawSourceConflict
 QC_SEQ_Merged
