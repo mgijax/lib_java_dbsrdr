@@ -46,27 +46,27 @@ public class RDRDBObjectCfg
 
     // Methods to get RADAR Database configuration parameters.
     //
-    public String getCloneTable()
+    public String getCloneTable() throws KnownException
     {
         return ConfigLookup.getConfigValue("MGI_CLONE_TABLE",cm);
     }
-    public String getCloneSeqTable()
+    public String getCloneSeqTable() throws KnownException
     {
         return ConfigLookup.getConfigValue("MGI_CLONE_SEQ_TABLE",cm);
     }
-    public String getOrganism()
+    public String getOrganism() throws KnownException
     {
         return ConfigLookup.getConfigValue("ORGANISM",cm);
     }
-    public String getDNAType()
+    public String getDNAType() throws KnownException
     {
         return ConfigLookup.getConfigValue("DNA_TYPE",cm);
     }
-    public String getVectorType()
+    public String getVectorType() throws KnownException
     {
         return ConfigLookup.getConfigValue("VECTOR_TYPE",cm);
     }
-    public String getJNumber()
+    public String getJNumber() throws KnownException
     {
         return ConfigLookup.getConfigValue("J_NUMBER",cm);
     }
