@@ -1,6 +1,19 @@
 DP_RPCI_Clones
+GB_EST_Reload
 MGI_CloneLoad_Accession
 MGI_CloneLoad_Clone
+QC_cDNALoad_CloneID_Discrep
+QC_cDNALoad_CloneID_Missing
+QC_cDNALoad_CloneID_Unknown
+QC_cDNALoad_Library_Discrep
+QC_cDNALoad_Library_Missing
+QC_cDNALoad_Library_No_Parent
+QC_cDNALoad_MGI_IMAGE_Discrep
+QC_CloneLoad_DupClone
+QC_CloneLoad_DupSeq
+QC_CloneLoad_MultiClone
+QC_CloneLoad_NonClone
+QC_CloneLoad_SeqOnly
 QC_MS_AttrEdit
 QC_MS_NameConflict
 QC_MS_UnresolvedOrganism
@@ -8,3 +21,4 @@ QC_MS_ChangedLibrary
 QC_SEQ_OldRef
 QC_SEQ_RawSourceConflict
 QC_SEQ_Merged
+WRK_cDNA_Clones
