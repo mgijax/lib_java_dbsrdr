@@ -14,29 +14,29 @@ package org.jax.mgi.shr.config;
  * <UL>
  *   <LI> Provides methods for retrieving configuration parameters.
  * </UL></p>
- * <p>Copyright: Copyright (c) 2003</p>
  * <p>Company: The Jackson Laboratory</p>
  * @author dbm
  * @version 1.0
  */
 
-public class CloneLoadCfg extends LoadCfg
+public class CloneLoadCfg extends Configurator
 {
     /**
-     * <p>Purpose: Constructs a clone load configurator.</p>
+     * <p>Constructs a clone load configurator</p>
      * <p>Assumes: Nothing</p>
      * <p>Effects: Nothing</p>
      * @param None
-     * @exception ConfigException
+     * @throws ConfigException if a configuration manager cannot be obtained
      */
-    public CloneLoadCfg () throws ConfigException
+    public CloneLoadCfg() throws ConfigException
     {
-        super();
     }
 
-
     /**
-     * Get the organism attribute from the configuration file.
+     * Get the value of the ORGANISM configuration parameter.
+     * @param None
+     * @return The configuration value
+     * @throws ConfigException if the value is not found
      */
     public String getOrganism () throws ConfigException
     {
@@ -44,7 +44,10 @@ public class CloneLoadCfg extends LoadCfg
     }
 
     /**
-     * Get the segmentType attribute from the configuration file.
+     * Get the value of the SEGMENT_TYPE configuration parameter.
+     * @param None
+     * @return The configuration value
+     * @throws ConfigException if the value is not found
      */
     public String getSegmentType () throws ConfigException
     {
@@ -52,7 +55,10 @@ public class CloneLoadCfg extends LoadCfg
     }
 
     /**
-     * Get the derivedFromID attribute from the configuration file.
+     * Get the value of the DERIVED_FROM_ID configuration parameter.
+     * @param None
+     * @return The configuration value
+     * @throws ConfigException if the value is not found
      */
     public String getDerivedFromID () throws ConfigException
     {
@@ -60,7 +66,10 @@ public class CloneLoadCfg extends LoadCfg
     }
 
     /**
-     * Get the vectorType attribute from the configuration file.
+     * Get the value of the VECTOR_TYPE configuration parameter.
+     * @param None
+     * @return The configuration value
+     * @throws ConfigException if the value is not found
      */
     public String getVectorType () throws ConfigException
     {
@@ -68,7 +77,10 @@ public class CloneLoadCfg extends LoadCfg
     }
 
     /**
-     * Get the jNumber attribute from the configuration file.
+     * Get the value of the J_NUMBER configuration parameter.
+     * @param None
+     * @return The configuration value
+     * @throws ConfigException if the value is not found
      */
     public String getJNumber () throws ConfigException
     {
@@ -76,7 +88,10 @@ public class CloneLoadCfg extends LoadCfg
     }
 
     /**
-     * Get the logicalDB attribute for a clone from the configuration file.
+     * Get the value of the LOGICAL_DB_CLONE configuration parameter.
+     * @param None
+     * @return The configuration value
+     * @throws ConfigException if the value is not found
      */
     public String getLogicalDBClone () throws ConfigException
     {
@@ -84,7 +99,10 @@ public class CloneLoadCfg extends LoadCfg
     }
 
     /**
-     * Get the logicalDB attribute for a sequence from the configuration file.
+     * Get the value of the LOGICAL_DB_SEQ configuration parameter.
+     * @param None
+     * @return The configuration value
+     * @throws ConfigException if the value is not found
      */
     public String getLogicalDBSeq () throws ConfigException
     {
@@ -94,6 +112,9 @@ public class CloneLoadCfg extends LoadCfg
 
 
 //  $Log$
+//  Revision 1.1  2003/05/05 16:37:00  dbm
+//  Renamed from RDRDBCfg.java
+//
 //
 /**************************************************************************
 *
