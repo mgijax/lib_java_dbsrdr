@@ -37,7 +37,7 @@ public class RDRDBObjectCfg
      * <p>Assumes: Nothing</p>
      * <p>Effects: Nothing</p>
      * @param None
-     * @exception ConfigException
+     * @exception KnownException
      */
     public RDRDBObjectCfg() throws KnownException
     {
