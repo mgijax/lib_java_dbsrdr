@@ -1,3 +1,6 @@
+//  $Header$
+//  $Name$
+
 package org.jax.mgi.shr.config;
 
 import org.jax.mgi.shr.exception.KnownException;
@@ -28,7 +31,7 @@ public class RDRDBCfg
 
     // An instance of a configuration manager.
     //
-    static protected ConfigurationManager cm = null;
+    private ConfigurationManager cm = null;
 
 
     /**
@@ -39,7 +42,7 @@ public class RDRDBCfg
      * @param None
      * @exception KnownException
      */
-    public RDRDBCfg() throws KnownException
+    public RDRDBCfg () throws KnownException
     {
         cm = ConfigurationManager.getInstance();
     }
@@ -48,16 +51,34 @@ public class RDRDBCfg
     /**
      * Get the name of the MGI clone table from the configuration file.
      */
-    public String getMGICloneTable() throws KnownException
+    public String getMGICloneTable () throws KnownException
     {
         return ConfigLookup.getConfigString("MGI_CLONE_TABLE",cm);
+    }
+
+    /**
+     * Get the SQL statement(s) to be executed before a bcp file is loaded
+     * into the MGI clone table.
+     */
+    public String getMGICloneBCPPreSQL () throws KnownException
+    {
+        return ConfigLookup.getConfigString("MGI_CLONE_BCP_PRE_SQL","",cm);
+    }
+
+    /**
+     * Get the SQL statement(s) to be executed after a bcp file is loaded
+     * into the MGI clone table.
+     */
+    public String getMGICloneBCPPostSQL () throws KnownException
+    {
+        return ConfigLookup.getConfigString("MGI_CLONE_BCP_POST_SQL","",cm);
     }
 
     /**
      * Get the configuration value that indicates if the MGI clone table
      * should be truncated before loading the bcp file.
      */
-    public boolean getMGICloneBCPTruncTable() throws KnownException
+    public boolean getMGICloneBCPTruncTable () throws KnownException
     {
         return ConfigLookup.getConfigBoolean("MGI_CLONE_BCP_TRUNCATE_TABLE",cm);
     }
@@ -66,78 +87,84 @@ public class RDRDBCfg
      * Get the configuration value that indicates if the indexes on the
      * MGI clone table should be dropped before loading the bcp file.
      */
-    public boolean getMGICloneBCPDropIndex() throws KnownException
+    public boolean getMGICloneBCPDropIndex () throws KnownException
     {
         return ConfigLookup.getConfigBoolean("MGI_CLONE_BCP_DROP_INDEXES",cm);
     }
 
     /**
-     * Get the configuration value that indicates if the transaction log
-     * should be truncated after loading the bcp file into the MGI clone
-     * table.
-     */
-    public boolean getMGICloneBCPTruncLog() throws KnownException
-    {
-        return ConfigLookup.getConfigBoolean("MGI_CLONE_BCP_TRUNCATE_LOG",cm);
-    }
-
-    /**
-     * Get the name of the MGI clone sequence table from the configuration
+     * Get the name of the MGI clone accession table from the configuration
      * file.
      */
-    public String getMGICloneSeqTable() throws KnownException
+    public String getMGICloneAccTable () throws KnownException
     {
-        return ConfigLookup.getConfigString("MGI_CLONE_SEQ_TABLE",cm);
+        return ConfigLookup.getConfigString("MGI_CLONE_ACC_TABLE",cm);
     }
 
     /**
-     * Get the configuration value that indicates if the MGI clone sequence
+     * Get the SQL statement(s) to be executed before a bcp file is loaded
+     * into the MGI clone accession table.
+     */
+    public String getMGICloneAccBCPPreSQL () throws KnownException
+    {
+        return ConfigLookup.getConfigString("MGI_CLONE_ACC_BCP_PRE_SQL","",cm);
+    }
+
+    /**
+     * Get the SQL statement(s) to be executed after a bcp file is loaded
+     * into the MGI clone accession table.
+     */
+    public String getMGICloneAccBCPPostSQL () throws KnownException
+    {
+        return ConfigLookup.getConfigString("MGI_CLONE_ACC_BCP_POST_SQL","",cm);
+    }
+
+    /**
+     * Get the configuration value that indicates if the MGI clone accession
      * table should be truncated before loading the bcp file.
      */
-    public boolean getMGICloneSeqBCPTruncTable() throws KnownException
+    public boolean getMGICloneAccBCPTruncTable () throws KnownException
     {
-        return ConfigLookup.getConfigBoolean("MGI_CLONE_SEQ_BCP_TRUNCATE_TABLE",cm);
+        return ConfigLookup.getConfigBoolean("MGI_CLONE_ACC_BCP_TRUNCATE_TABLE",cm);
     }
 
     /**
      * Get the configuration value that indicates if the indexes on the
-     * MGI clone sequence table should be dropped before loading the bcp file.
+     * MGI clone accession table should be dropped before loading the bcp file.
      */
-    public boolean getMGICloneSeqBCPDropIndex() throws KnownException
+    public boolean getMGICloneAccBCPDropIndex () throws KnownException
     {
-        return ConfigLookup.getConfigBoolean("MGI_CLONE_SEQ_BCP_DROP_INDEXES",cm);
-    }
-
-    /**
-     * Get the configuration value that indicates if the transaction log
-     * should be truncated after loading the bcp file into the MGI clone
-     * sequence table.
-     */
-    public boolean getMGICloneSeqBCPTruncLog() throws KnownException
-    {
-        return ConfigLookup.getConfigBoolean("MGI_CLONE_SEQ_BCP_TRUNCATE_LOG",cm);
+        return ConfigLookup.getConfigBoolean("MGI_CLONE_ACC_BCP_DROP_INDEXES",cm);
     }
 
     /**
      * Get the organism attribute from the configuration file.
      */
-    public String getOrganism() throws KnownException
+    public String getOrganism () throws KnownException
     {
         return ConfigLookup.getConfigString("ORGANISM",cm);
     }
 
     /**
-     * Get the dnaType attribute from the configuration file.
+     * Get the segmentType attribute from the configuration file.
      */
-    public String getDNAType() throws KnownException
+    public String getSegmentType () throws KnownException
     {
-        return ConfigLookup.getConfigString("DNA_TYPE",cm);
+        return ConfigLookup.getConfigString("SEGMENT_TYPE",cm);
+    }
+
+    /**
+     * Get the derivedFromID attribute from the configuration file.
+     */
+    public String getDerivedFromID () throws KnownException
+    {
+        return ConfigLookup.getConfigString("DERIVED_FROM_ID",cm);
     }
 
     /**
      * Get the vectorType attribute from the configuration file.
      */
-    public String getVectorType() throws KnownException
+    public String getVectorType () throws KnownException
     {
         return ConfigLookup.getConfigString("VECTOR_TYPE",cm);
     }
@@ -145,8 +172,49 @@ public class RDRDBCfg
     /**
      * Get the jNumber attribute from the configuration file.
      */
-    public String getJNumber() throws KnownException
+    public String getJNumber () throws KnownException
     {
         return ConfigLookup.getConfigString("J_NUMBER",cm);
     }
+
+    /**
+     * Get the logicalDB attribute for a clone from the configuration file.
+     */
+    public String getLogicalDBClone () throws KnownException
+    {
+        return ConfigLookup.getConfigString("LOGICAL_DB_CLONE",cm);
+    }
+
+    /**
+     * Get the logicalDB attribute for a sequence from the configuration file.
+     */
+    public String getLogicalDBSeq () throws KnownException
+    {
+        return ConfigLookup.getConfigString("LOGICAL_DB_SEQ",cm);
+    }
 }
+
+
+//  $Log$
+/**************************************************************************
+*
+* Warranty Disclaimer and Copyright Notice
+*
+*  THE JACKSON LABORATORY MAKES NO REPRESENTATION ABOUT THE SUITABILITY OR
+*  ACCURACY OF THIS SOFTWARE OR DATA FOR ANY PURPOSE, AND MAKES NO WARRANTIES,
+*  EITHER EXPRESS OR IMPLIED, INCLUDING MERCHANTABILITY AND FITNESS FOR A
+*  PARTICULAR PURPOSE OR THAT THE USE OF THIS SOFTWARE OR DATA WILL NOT
+*  INFRINGE ANY THIRD PARTY PATENTS, COPYRIGHTS, TRADEMARKS, OR OTHER RIGHTS.
+*  THE SOFTWARE AND DATA ARE PROVIDED "AS IS".
+*
+*  This software and data are provided to enhance knowledge and encourage
+*  progress in the scientific community and are to be used only for research
+*  and educational purposes.  Any reproduction or use for commercial purpose
+*  is prohibited without the prior express written permission of The Jackson
+*  Laboratory.
+*
+* Copyright \251 1996, 1999, 2002, 2003 by The Jackson Laboratory
+*
+* All Rights Reserved
+*
+**************************************************************************/

@@ -1,3 +1,6 @@
+//  $Header$
+//  $Name$
+
 package org.jax.mgi.dbs.rdr;
 
 import org.jax.mgi.dbs.mgi.MGIDBObject;
@@ -28,10 +31,16 @@ public class RDRDBObject extends MGIDBObject
 
     // RADAR database specific attributes.
     //
+    protected int Clone_key;
+    protected String cloneName;
+    protected String cloneLibrary;
     protected String organism;
-    protected String dnaType;
+    protected String segmentType;
+    protected String derivedFromID;
     protected String vectorType;
     protected String jNumber;
+    protected String accID;
+    protected String logicalDB;
 
 
     /**
@@ -41,10 +50,25 @@ public class RDRDBObject extends MGIDBObject
      * @param None
      * @exception None
      */
-    public RDRDBObject()
+    public RDRDBObject ()
     {
     }
 
+
+    /**
+     * Get the Clone_key attribute from this object.
+     */
+    public int getCloneKey () { return Clone_key; }
+
+    /**
+     * Get the cloneName attribute from this object.
+     */
+    public String getCloneName () { return cloneName; }
+
+    /**
+     * Get the cloneLibrary attribute from this object.
+     */
+    public String getCloneLibrary () { return cloneLibrary; }
 
     /**
      * Get the organism attribute from this object.
@@ -52,9 +76,14 @@ public class RDRDBObject extends MGIDBObject
     public String getOrganism () { return organism; }
 
     /**
-     * Get the dnaType attribute from this object.
+     * Get the segmentType attribute from this object.
      */
-    public String getDNAType () { return dnaType; }
+    public String getSegmentType () { return segmentType; }
+
+    /**
+     * Get the derivedFromID attribute from this object.
+     */
+    public String getDerivedFromID () { return derivedFromID; }
 
     /**
      * Get the vectorType attribute from this object.
@@ -67,14 +96,44 @@ public class RDRDBObject extends MGIDBObject
     public String getJNumber () { return jNumber; }
 
     /**
+     * Get the accID attribute from this object.
+     */
+    public String getAccID () { return accID; }
+
+    /**
+     * Get the logicalDB attribute from this object.
+     */
+    public String getLogicalDB () { return logicalDB; }
+
+    /**
+     * Set the Clone_key attribute of this object to the given value.
+     */
+    public void setCloneKey (int pClone_key) { Clone_key = pClone_key; }
+
+    /**
+     * Set the cloneName attribute of this object to the given value.
+     */
+    public void setCloneName (String pCloneName) { cloneName = pCloneName; }
+
+    /**
+     * Set the cloneLibrary attribute of this object to the given value.
+     */
+    public void setCloneLibrary (String pCloneLibrary) { cloneLibrary = pCloneLibrary; }
+
+    /**
      * Set the organism attribute of this object to the given value.
      */
     public void setOrganism (String pOrganism) { organism = pOrganism; }
 
     /**
-     * Set the dnaType attribute of this object to the given value.
+     * Set the segmentType attribute of this object to the given value.
      */
-    public void setDNAType (String pDNAType) { dnaType = pDNAType; }
+    public void setSegmentType (String pSegmentType) { segmentType = pSegmentType; }
+
+    /**
+     * Set the derivedFromID attribute of this object to the given value.
+     */
+    public void setDerivedFromID (String pDerivedFromID) { derivedFromID = pDerivedFromID; }
 
     /**
      * Set the vectorType attribute of this object to the given value.
@@ -85,4 +144,39 @@ public class RDRDBObject extends MGIDBObject
      * Set the jNumber attribute of this object to the given value.
      */
     public void setJNumber (String pJNumber) { jNumber = pJNumber; }
+
+    /**
+     * Set the accID attribute of this object to the given value.
+     */
+    public void setAccID (String pAccID) { accID = pAccID; }
+
+    /**
+     * Set the logicalDB attribute of this object to the given value.
+     */
+    public void setLogicalDB (String pLogicalDB) { logicalDB = pLogicalDB; }
 }
+
+
+//  $Log$
+/**************************************************************************
+*
+* Warranty Disclaimer and Copyright Notice
+*
+*  THE JACKSON LABORATORY MAKES NO REPRESENTATION ABOUT THE SUITABILITY OR
+*  ACCURACY OF THIS SOFTWARE OR DATA FOR ANY PURPOSE, AND MAKES NO WARRANTIES,
+*  EITHER EXPRESS OR IMPLIED, INCLUDING MERCHANTABILITY AND FITNESS FOR A
+*  PARTICULAR PURPOSE OR THAT THE USE OF THIS SOFTWARE OR DATA WILL NOT
+*  INFRINGE ANY THIRD PARTY PATENTS, COPYRIGHTS, TRADEMARKS, OR OTHER RIGHTS.
+*  THE SOFTWARE AND DATA ARE PROVIDED "AS IS".
+*
+*  This software and data are provided to enhance knowledge and encourage
+*  progress in the scientific community and are to be used only for research
+*  and educational purposes.  Any reproduction or use for commercial purpose
+*  is prohibited without the prior express written permission of The Jackson
+*  Laboratory.
+*
+* Copyright \251 1996, 1999, 2002, 2003 by The Jackson Laboratory
+*
+* All Rights Reserved
+*
+**************************************************************************/
