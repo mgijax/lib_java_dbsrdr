@@ -1,7 +1,5 @@
 package org.jax.mgi.dbs.rdr;
 
-import org.jax.mgi.shr.exception.KnownException;
-import org.jax.mgi.shr.config.RDRDBObjectCfg;
 import org.jax.mgi.dbs.mgi.MGIDBObject;
 
 /**
@@ -10,12 +8,9 @@ import org.jax.mgi.dbs.mgi.MGIDBObject;
  * <p>HAS:
  * <UL>
  *   <LI> RADAR database attributes
- *   <LI> RADAR database object configurator
  * </UL></p>
  * <p>DOES:
  * <UL>
- *   <LI> Uses an RADAR database object configurator to initialize certain
- *        attributes.
  *   <LI> Provides methods to get attributes stored in this object.
  *   <LI> Provides methods to set attributes stored in this object.
  * </UL></p>
@@ -38,32 +33,16 @@ public class RDRDBObject extends MGIDBObject
     protected String vectorType;
     protected String jNumber;
 
-    protected String mgiCloneTable;
-    protected String mgiCloneSeqTable;
-
-    // An instance of the RADAR database object configurator.
-    //
-    private RDRDBObjectCfg RDRCfg;
-
 
     /**
-     * <p>Purpose: Constructs a RADAR database object and initializes its
-     *             attributes.</p>
+     * <p>Purpose: Constructs a RADAR database object.</p>
      * <p>Assumes: Nothing</p>
-     * <p>Effects: Set the class variables.</p>
+     * <p>Effects: Nothing</p>
      * @param None
-     * @exception KnownException
+     * @exception None
      */
-    public RDRDBObject() throws KnownException
+    public RDRDBObject()
     {
-        RDRCfg = new RDRDBObjectCfg();
-
-        organism = RDRCfg.getOrganism();
-        dnaType = RDRCfg.getDNAType();
-        vectorType = RDRCfg.getVectorType();
-        jNumber = RDRCfg.getJNumber();
-        mgiCloneTable = RDRCfg.getCloneTable();
-        mgiCloneSeqTable = RDRCfg.getCloneSeqTable();
     }
 
     // Methods to get attributes from this object.
@@ -72,8 +51,6 @@ public class RDRDBObject extends MGIDBObject
     public String getDNAType () { return dnaType; }
     public String getVectorType () { return vectorType; }
     public String getJNumber () { return jNumber; }
-    public String getMGICloneTable () { return mgiCloneTable; }
-    public String getMGICloneSeqTable () { return mgiCloneSeqTable; }
 
     // Methods to set attributes in this object.
     //
@@ -81,6 +58,4 @@ public class RDRDBObject extends MGIDBObject
     public void setDNAType (String pDNAType) { dnaType = pDNAType; }
     public void setVectorType (String pVectorType) { vectorType = pVectorType; }
     public void setJNumber (String pJNumber) { jNumber = pJNumber; }
-    public void setMGICloneTable (String pMGICloneTable) { mgiCloneTable = pMGICloneTable; }
-    public void setMGICloneSeqTable (String pMGICloneSeqTable) { mgiCloneSeqTable = pMGICloneSeqTable; }
 }
