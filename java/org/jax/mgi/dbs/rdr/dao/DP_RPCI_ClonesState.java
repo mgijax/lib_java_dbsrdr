@@ -37,7 +37,7 @@ public class DP_RPCI_ClonesState
     private String chromosome = null;
     private String status = null;
     private String gCenter = null;
-    private Timestamp clone_date = null;
+    private String cloneDate = null;
     private String seqID = null;
     private Integer _JobStream_key = null;
     private Timestamp creation_date = null;
@@ -126,14 +126,14 @@ public class DP_RPCI_ClonesState
     public String getGCenter () { return gCenter; }
 
     /**
-     * Get the clone_date attribute from this object.
+     * Get the cCloneDate attribute from this object.
      * @assumes Nothing
      * @effects Nothing
      * @param None
-     * @return The clone_date attribute.
+     * @return The cloneDate attribute.
      * @throws Nothing
      */
-    public Timestamp getCloneDate () { return clone_date; }
+    public String getCloneDate () { return cloneDate; }
 
     /**
      * Get the seqID attribute from this object.
@@ -236,14 +236,14 @@ public class DP_RPCI_ClonesState
     public void setGCenter (String in) { gCenter = in; }
 
     /**
-     * Set the clone_date attribute of this object to the given value.
+     * Set the cloneDate attribute of this object to the given value.
      * @assumes Nothing
      * @effects Nothing
      * @param in The value to set the attribute to.
      * @return Nothing
      * @throws Nothing
      */
-    public void setCloneDate (Timestamp in) { clone_date = in; }
+    public void setCloneDate (String in) { cloneDate = in; }
 
     /**
      * Set the seqID attribute of this object to the given value.
@@ -293,7 +293,7 @@ public class DP_RPCI_ClonesState
         chromosome = null;
         status = null;
         gCenter = null;
-        clone_date = null;
+        cloneDate = null;
         seqID = null;
         _JobStream_key = null;
         creation_date = null;
@@ -302,6 +302,9 @@ public class DP_RPCI_ClonesState
 
 
 //  $Log$
+//  Revision 1.1  2003/10/15 15:42:04  dbm
+//  Initial version
+//
 //
 /**************************************************************************
 *
