@@ -1,8 +1,11 @@
 DP_MGC_Clones
 DP_RPCI_Clones
 GB_EST_Reload
+MGI_Association
 MGI_CloneLoad_Accession
 MGI_CloneLoad_Clone
+QC_AssocLoad_Assoc_Discrep
+QC_AssocLoad_Target_Discrep
 QC_cDNALoad_CloneID_Discrep
 QC_cDNALoad_CloneID_Missing
 QC_cDNALoad_CloneID_Unknown
