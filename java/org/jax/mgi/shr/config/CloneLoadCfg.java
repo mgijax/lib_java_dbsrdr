@@ -4,17 +4,17 @@
 package org.jax.mgi.shr.config;
 
 /**
- * <p>IS: An object that is used to retrieve configuration parameters that
- *        are common to all clone loads.</p>
- * <p>HAS:
- * <UL>
+ * @is An object that is used to retrieve configuration parameters that
+ *     are common to all clone loads.
+ * @has
+ *   <UL>
  *   <LI> A reference to a configuration manager
- * </UL></p>
- * <p>DOES:
- * <UL>
+ *   </UL>
+ * @does
+ *   <UL>
  *   <LI> Provides methods for retrieving configuration parameters.
- * </UL></p>
- * <p>Company: The Jackson Laboratory</p>
+ *   </UL>
+ * @company The Jackson Laboratory
  * @author dbm
  * @version 1.0
  */
@@ -22,9 +22,9 @@ package org.jax.mgi.shr.config;
 public class CloneLoadCfg extends Configurator
 {
     /**
-     * <p>Constructs a clone load configurator</p>
-     * <p>Assumes: Nothing</p>
-     * <p>Effects: Nothing</p>
+     * Constructs a clone load configurator.
+     * @assumes Nothing
+     * @effects Nothing
      * @param None
      * @throws ConfigException if a configuration manager cannot be obtained
      */
@@ -34,6 +34,8 @@ public class CloneLoadCfg extends Configurator
 
     /**
      * Get the value of the ORGANISM configuration parameter.
+     * @assumes Nothing
+     * @effects Nothing
      * @param None
      * @return The configuration value
      * @throws ConfigException if the value is not found
@@ -45,6 +47,8 @@ public class CloneLoadCfg extends Configurator
 
     /**
      * Get the value of the SEGMENT_TYPE configuration parameter.
+     * @assumes Nothing
+     * @effects Nothing
      * @param None
      * @return The configuration value
      * @throws ConfigException if the value is not found
@@ -56,6 +60,8 @@ public class CloneLoadCfg extends Configurator
 
     /**
      * Get the value of the DERIVED_FROM_ID configuration parameter.
+     * @assumes Nothing
+     * @effects Nothing
      * @param None
      * @return The configuration value
      * @throws ConfigException if the value is not found
@@ -67,6 +73,8 @@ public class CloneLoadCfg extends Configurator
 
     /**
      * Get the value of the VECTOR_TYPE configuration parameter.
+     * @assumes Nothing
+     * @effects Nothing
      * @param None
      * @return The configuration value
      * @throws ConfigException if the value is not found
@@ -78,6 +86,8 @@ public class CloneLoadCfg extends Configurator
 
     /**
      * Get the value of the J_NUMBER configuration parameter.
+     * @assumes Nothing
+     * @effects Nothing
      * @param None
      * @return The configuration value
      * @throws ConfigException if the value is not found
@@ -89,6 +99,8 @@ public class CloneLoadCfg extends Configurator
 
     /**
      * Get the value of the LOGICAL_DB_CLONE configuration parameter.
+     * @assumes Nothing
+     * @effects Nothing
      * @param None
      * @return The configuration value
      * @throws ConfigException if the value is not found
@@ -100,6 +112,8 @@ public class CloneLoadCfg extends Configurator
 
     /**
      * Get the value of the LOGICAL_DB_SEQ configuration parameter.
+     * @assumes Nothing
+     * @effects Nothing
      * @param None
      * @return The configuration value
      * @throws ConfigException if the value is not found
@@ -112,6 +126,9 @@ public class CloneLoadCfg extends Configurator
 
 
 //  $Log$
+//  Revision 1.2  2003/05/08 19:20:27  dbm
+//  Changes per code review.
+//
 //  Revision 1.1  2003/05/05 16:37:00  dbm
 //  Renamed from RDRDBCfg.java
 //

@@ -4,18 +4,18 @@
 package org.jax.mgi.dbs.rdr;
 
 /**
- * <p>IS: An object that represents attributes that are common to all RADAR
- *        clone objects.</p>
- * <p>HAS:
- * <UL>
+ * @is An object that represents attributes that are common to all RADAR
+ *     clone objects.
+ * @has
+ *   <UL>
  *   <LI> RADAR database attributes
- * </UL></p>
- * <p>DOES:
- * <UL>
+ *   </UL>
+ * @does
+ *   <UL>
  *   <LI> Provides methods to get attributes stored in this object.
  *   <LI> Provides methods to set attributes stored in this object.
- * </UL></p>
- * <p>Company: The Jackson Laboratory</p>
+ *   </UL>
+ * @company The Jackson Laboratory
  * @author dbm
  * @version 1.0
  */
@@ -29,6 +29,10 @@ public class RDRCloneObject
     // The value for the _Clone_key column in the RADAR database.
     //
     protected int Clone_key;
+
+    // The value for the cloneID column in the RADAR database.
+    //
+    protected String cloneID;
 
     // The value for the cloneName column in the RADAR database.
     //
@@ -74,9 +78,9 @@ public class RDRCloneObject
 
 
     /**
-     * <p>Get the Clone_key attribute from this object.</p>
-     * <p>Assumes: Nothing</p>
-     * <p>Effects: Nothing</p>
+     * Get the Clone_key attribute from this object.
+     * @assumes Nothing
+     * @effects Nothing
      * @param None
      * @return The Clone_key attribute
      * @throws Nothing
@@ -84,9 +88,19 @@ public class RDRCloneObject
     public int getCloneKey () { return Clone_key; }
 
     /**
-     * <p>Get the cloneName attribute from this object.</p>
-     * <p>Assumes: Nothing</p>
-     * <p>Effects: Nothing</p>
+     * Get the cloneID attribute from this object.
+     * @assumes Nothing
+     * @effects Nothing
+     * @param None
+     * @return The cloneID attribute
+     * @throws Nothing
+     */
+    public String getCloneID () { return cloneID; }
+
+    /**
+     * Get the cloneName attribute from this object.
+     * @assumes Nothing
+     * @effects Nothing
      * @param None
      * @return The cloneName attribute
      * @throws Nothing
@@ -94,9 +108,9 @@ public class RDRCloneObject
     public String getCloneName () { return cloneName; }
 
     /**
-     * <p>Get the cloneLibrary attribute from this object.</p>
-     * <p>Assumes: Nothing</p>
-     * <p>Effects: Nothing</p>
+     * Get the cloneLibrary attribute from this object.
+     * @assumes Nothing
+     * @effects Nothing
      * @param None
      * @return The cloneLibrary attribute
      * @throws Nothing
@@ -104,9 +118,9 @@ public class RDRCloneObject
     public String getCloneLibrary () { return cloneLibrary; }
 
     /**
-     * <p>Get the organism attribute from this object.</p>
-     * <p>Assumes: Nothing</p>
-     * <p>Effects: Nothing</p>
+     * Get the organism attribute from this object.
+     * @assumes Nothing
+     * @effects Nothing
      * @param None
      * @return The organism attribute
      * @throws Nothing
@@ -114,9 +128,9 @@ public class RDRCloneObject
     public String getOrganism () { return organism; }
 
     /**
-     * <p>Get the segmentType attribute from this object.</p>
-     * <p>Assumes: Nothing</p>
-     * <p>Effects: Nothing</p>
+     * Get the segmentType attribute from this object.
+     * @assumes Nothing
+     * @effects Nothing
      * @param None
      * @return The segmentType attribute
      * @throws Nothing
@@ -124,9 +138,9 @@ public class RDRCloneObject
     public String getSegmentType () { return segmentType; }
 
     /**
-     * <p>Get the derivedFromID attribute from this object.</p>
-     * <p>Assumes: Nothing</p>
-     * <p>Effects: Nothing</p>
+     * Get the derivedFromID attribute from this object.
+     * @assumes Nothing
+     * @effects Nothing
      * @param None
      * @return The derivedFromID attribute
      * @throws Nothing
@@ -134,9 +148,9 @@ public class RDRCloneObject
     public String getDerivedFromID () { return derivedFromID; }
 
     /**
-     * <p>Get the vectorType attribute from this object.</p>
-     * <p>Assumes: Nothing</p>
-     * <p>Effects: Nothing</p>
+     * Get the vectorType attribute from this object.
+     * @assumes Nothing
+     * @effects Nothing
      * @param None
      * @return The vectorType attribute
      * @throws Nothing
@@ -144,9 +158,9 @@ public class RDRCloneObject
     public String getVectorType () { return vectorType; }
 
     /**
-     * <p>Get the jNumber attribute from this object.</p>
-     * <p>Assumes: Nothing</p>
-     * <p>Effects: Nothing</p>
+     * Get the jNumber attribute from this object.
+     * @assumes Nothing
+     * @effects Nothing
      * @param None
      * @return The jNumber attribute
      * @throws Nothing
@@ -154,9 +168,9 @@ public class RDRCloneObject
     public String getJNumber () { return jNumber; }
 
     /**
-     * <p>Get the accID attribute from this object.</p>
-     * <p>Assumes: Nothing</p>
-     * <p>Effects: Nothing</p>
+     * Get the accID attribute from this object.
+     * @assumes Nothing
+     * @effects Nothing
      * @param None
      * @return The accID attribute
      * @throws Nothing
@@ -164,9 +178,9 @@ public class RDRCloneObject
     public String getAccID () { return accID; }
 
     /**
-     * <p>Get the logicalDBClone attribute from this object.</p>
-     * <p>Assumes: Nothing</p>
-     * <p>Effects: Nothing</p>
+     * Get the logicalDBClone attribute from this object.
+     * @assumes Nothing
+     * @effects Nothing
      * @param None
      * @return The logicalDBClone attribute
      * @throws Nothing
@@ -174,9 +188,9 @@ public class RDRCloneObject
     public String getLogicalDBClone () { return logicalDBClone; }
 
     /**
-     * <p>Get the logicalDBSeq attribute from this object.</p>
-     * <p>Assumes: Nothing</p>
-     * <p>Effects: Nothing</p>
+     * Get the logicalDBSeq attribute from this object.
+     * @assumes Nothing
+     * @effects Nothing
      * @param None
      * @return The logicalDBSeq attribute
      * @throws Nothing
@@ -184,10 +198,9 @@ public class RDRCloneObject
     public String getLogicalDBSeq () { return logicalDBSeq; }
 
     /**
-     * <p>Set the Clone_key attribute of this object to the
-     *    given value.</p>
-     * <p>Assumes: Nothing</p>
-     * <p>Effects: Nothing</p>
+     * Set the Clone_key attribute of this object to the given value.
+     * @assumes Nothing
+     * @effects Nothing
      * @param pClone_key value to set the attribute to
      * @return Nothing
      * @throws Nothing
@@ -195,10 +208,19 @@ public class RDRCloneObject
     public void setCloneKey (int pClone_key) { Clone_key = pClone_key; }
 
     /**
-     * <p>Set the cloneName attribute of this object to the
-     *    given value.</p>
-     * <p>Assumes: Nothing</p>
-     * <p>Effects: Nothing</p>
+     * Set the cloneID attribute of this object to the given value.
+     * @assumes Nothing
+     * @effects Nothing
+     * @param pCloneID value to set the attribute to
+     * @return Nothing
+     * @throws Nothing
+     */
+    public void setCloneID (String pCloneID) { cloneID = pCloneID; }
+
+    /**
+     * Set the cloneName attribute of this object to the given value.
+     * @assumes Nothing
+     * @effects Nothing
      * @param pCloneName value to set the attribute to
      * @return Nothing
      * @throws Nothing
@@ -206,10 +228,9 @@ public class RDRCloneObject
     public void setCloneName (String pCloneName) { cloneName = pCloneName; }
 
     /**
-     * <p>Set the cloneLibrary attribute of this object to the
-     *    given value.</p>
-     * <p>Assumes: Nothing</p>
-     * <p>Effects: Nothing</p>
+     * Set the cloneLibrary attribute of this object to the given value.
+     * @assumes Nothing
+     * @effects Nothing
      * @param pCloneLibrary value to set the attribute to
      * @return Nothing
      * @throws Nothing
@@ -217,10 +238,9 @@ public class RDRCloneObject
     public void setCloneLibrary (String pCloneLibrary) { cloneLibrary = pCloneLibrary; }
 
     /**
-     * <p>Set the organism attribute of this object to the
-     *    given value.</p>
-     * <p>Assumes: Nothing</p>
-     * <p>Effects: Nothing</p>
+     * Set the organism attribute of this object to the given value.
+     * @assumes Nothing
+     * @effects Nothing
      * @param pOrganism value to set the attribute to
      * @return Nothing
      * @throws Nothing
@@ -228,10 +248,9 @@ public class RDRCloneObject
     public void setOrganism (String pOrganism) { organism = pOrganism; }
 
     /**
-     * <p>Set the segmentType attribute of this object to the
-     *    given value.</p>
-     * <p>Assumes: Nothing</p>
-     * <p>Effects: Nothing</p>
+     * Set the segmentType attribute of this object to the given value.
+     * @assumes Nothing
+     * @effects Nothing
      * @param pSegmentType value to set the attribute to
      * @return Nothing
      * @throws Nothing
@@ -239,10 +258,9 @@ public class RDRCloneObject
     public void setSegmentType (String pSegmentType) { segmentType = pSegmentType; }
 
     /**
-     * <p>Set the derivedFromID attribute of this object to the
-     *    given value.</p>
-     * <p>Assumes: Nothing</p>
-     * <p>Effects: Nothing</p>
+     * Set the derivedFromID attribute of this object to the given value.
+     * @assumes Nothing
+     * @effects Nothing
      * @param pDerivedFromID value to set the attribute to
      * @return Nothing
      * @throws Nothing
@@ -250,10 +268,9 @@ public class RDRCloneObject
     public void setDerivedFromID (String pDerivedFromID) { derivedFromID = pDerivedFromID; }
 
     /**
-     * <p>Set the vectorType attribute of this object to the
-     *    given value.</p>
-     * <p>Assumes: Nothing</p>
-     * <p>Effects: Nothing</p>
+     * Set the vectorType attribute of this object to the given value.
+     * @assumes Nothing
+     * @effects Nothing
      * @param pVectorType value to set the attribute to
      * @return Nothing
      * @throws Nothing
@@ -261,10 +278,9 @@ public class RDRCloneObject
     public void setVectorType (String pVectorType) { vectorType = pVectorType; }
 
     /**
-     * <p>Set the jNumber attribute of this object to the
-     *    given value.</p>
-     * <p>Assumes: Nothing</p>
-     * <p>Effects: Nothing</p>
+     * Set the jNumber attribute of this object to the given value.
+     * @assumes Nothing
+     * @effects Nothing
      * @param pJNumber value to set the attribute to
      * @return Nothing
      * @throws Nothing
@@ -272,10 +288,9 @@ public class RDRCloneObject
     public void setJNumber (String pJNumber) { jNumber = pJNumber; }
 
     /**
-     * <p>Set the accID attribute of this object to the
-     *    given value.</p>
-     * <p>Assumes: Nothing</p>
-     * <p>Effects: Nothing</p>
+     * Set the accID attribute of this object to the given value.
+     * @assumes Nothing
+     * @effects Nothing
      * @param pAccID value to set the attribute to
      * @return Nothing
      * @throws Nothing
@@ -283,10 +298,9 @@ public class RDRCloneObject
     public void setAccID (String pAccID) { accID = pAccID; }
 
     /**
-     * <p>Set the logicalDBClone attribute of this object to the
-     *    given value.</p>
-     * <p>Assumes: Nothing</p>
-     * <p>Effects: Nothing</p>
+     * Set the logicalDBClone attribute of this object to the given value.
+     * @assumes Nothing
+     * @effects Nothing
      * @param pLogicalDBClone value to set the attribute to
      * @return Nothing
      * @throws Nothing
@@ -294,10 +308,9 @@ public class RDRCloneObject
     public void setLogicalDBClone (String pLogicalDBClone) { logicalDBClone = pLogicalDBClone; }
 
     /**
-     * <p>Set the logicalDBSeq attribute of this object to the
-     *    given value.</p>
-     * <p>Assumes: Nothing</p>
-     * <p>Effects: Nothing</p>
+     * Set the logicalDBSeq attribute of this object to the given value.
+     * @assumes Nothing
+     * @effects Nothing
      * @param pLogicalDBSeq value to set the attribute to
      * @return Nothing
      * @throws Nothing
@@ -307,6 +320,9 @@ public class RDRCloneObject
 
 
 //  $Log$
+//  Revision 1.1  2003/05/08 19:13:14  dbm
+//  Renamed from RDRDBObject.java
+//
 //  Revision 1.6  2003/05/05 16:47:18  dbm
 //  Include logicalDB attribute for the clone and seq ID.
 //
