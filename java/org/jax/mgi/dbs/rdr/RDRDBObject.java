@@ -40,7 +40,8 @@ public class RDRDBObject extends MGIDBObject
     protected String vectorType;
     protected String jNumber;
     protected String accID;
-    protected String logicalDB;
+    protected String logicalDBClone;
+    protected String logicalDBSeq;
 
 
     /**
@@ -101,9 +102,14 @@ public class RDRDBObject extends MGIDBObject
     public String getAccID () { return accID; }
 
     /**
-     * Get the logicalDB attribute from this object.
+     * Get the logicalDBClone attribute from this object.
      */
-    public String getLogicalDB () { return logicalDB; }
+    public String getLogicalDBClone () { return logicalDBClone; }
+
+    /**
+     * Get the logicalDBSeq attribute from this object.
+     */
+    public String getLogicalDBSeq () { return logicalDBSeq; }
 
     /**
      * Set the Clone_key attribute of this object to the given value.
@@ -151,13 +157,21 @@ public class RDRDBObject extends MGIDBObject
     public void setAccID (String pAccID) { accID = pAccID; }
 
     /**
-     * Set the logicalDB attribute of this object to the given value.
+     * Set the logicalDBClone attribute of this object to the given value.
      */
-    public void setLogicalDB (String pLogicalDB) { logicalDB = pLogicalDB; }
+    public void setLogicalDBClone (String pLogicalDBClone) { logicalDBClone = pLogicalDBClone; }
+
+    /**
+     * Set the logicalDBSeq attribute of this object to the given value.
+     */
+    public void setLogicalDBSeq (String pLogicalDBSeq) { logicalDBSeq = pLogicalDBSeq; }
 }
 
 
 //  $Log$
+//  Revision 1.5  2003/04/15 18:44:54  dbm
+//  Changes per design review
+//
 /**************************************************************************
 *
 * Warranty Disclaimer and Copyright Notice
