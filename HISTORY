@@ -1,3 +1,9 @@
+TAG: lib_java_dbsrdr-1-0-6
+DATE: 02/02/2004
+STAFF: mbw
+RELEASE: development
+CHANGES: modified properties and targets in ant build files
+
 TAG: lib_java_dbsrdr-jsam_BP
 DATE: 01/27/2004
 STAFF: lec
