@@ -33,19 +33,6 @@ public class CloneLoadCfg extends Configurator
     }
 
     /**
-     * Get the value of the ORGANISM configuration parameter.
-     * @assumes Nothing
-     * @effects Nothing
-     * @param None
-     * @return The configuration value
-     * @throws ConfigException if the value is not found
-     */
-    public String getOrganism () throws ConfigException
-    {
-        return getConfigString("ORGANISM");
-    }
-
-    /**
      * Get the value of the SEGMENT_TYPE configuration parameter.
      * @assumes Nothing
      * @effects Nothing
@@ -56,19 +43,6 @@ public class CloneLoadCfg extends Configurator
     public String getSegmentType () throws ConfigException
     {
         return getConfigString("SEGMENT_TYPE");
-    }
-
-    /**
-     * Get the value of the DERIVED_FROM_ID configuration parameter.
-     * @assumes Nothing
-     * @effects Nothing
-     * @param None
-     * @return The configuration value
-     * @throws ConfigException if the value is not found
-     */
-    public String getDerivedFromID () throws ConfigException
-    {
-        return getConfigString("DERIVED_FROM_ID");
     }
 
     /**
@@ -126,6 +100,9 @@ public class CloneLoadCfg extends Configurator
 
 
 //  $Log$
+//  Revision 1.3  2003/05/13 18:48:47  dbm
+//  Fixed javadocs
+//
 //  Revision 1.2  2003/05/08 19:20:27  dbm
 //  Changes per code review.
 //
