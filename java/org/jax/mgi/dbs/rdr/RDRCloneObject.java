@@ -42,17 +42,9 @@ public class RDRCloneObject
     //
     protected String cloneLibrary;
 
-    // The value for the organism column in the RADAR database.
-    //
-    protected String organism;
-
     // The value for the segmentType column in the RADAR database.
     //
     protected String segmentType;
-
-    // The value for the derivedFromID column in the RADAR database.
-    //
-    protected String derivedFromID;
 
     // The value for the vectorType column in the RADAR database.
     //
@@ -118,16 +110,6 @@ public class RDRCloneObject
     public String getCloneLibrary () { return cloneLibrary; }
 
     /**
-     * Get the organism attribute from this object.
-     * @assumes Nothing
-     * @effects Nothing
-     * @param None
-     * @return The organism attribute
-     * @throws Nothing
-     */
-    public String getOrganism () { return organism; }
-
-    /**
      * Get the segmentType attribute from this object.
      * @assumes Nothing
      * @effects Nothing
@@ -136,16 +118,6 @@ public class RDRCloneObject
      * @throws Nothing
      */
     public String getSegmentType () { return segmentType; }
-
-    /**
-     * Get the derivedFromID attribute from this object.
-     * @assumes Nothing
-     * @effects Nothing
-     * @param None
-     * @return The derivedFromID attribute
-     * @throws Nothing
-     */
-    public String getDerivedFromID () { return derivedFromID; }
 
     /**
      * Get the vectorType attribute from this object.
@@ -238,16 +210,6 @@ public class RDRCloneObject
     public void setCloneLibrary (String pCloneLibrary) { cloneLibrary = pCloneLibrary; }
 
     /**
-     * Set the organism attribute of this object to the given value.
-     * @assumes Nothing
-     * @effects Nothing
-     * @param pOrganism value to set the attribute to
-     * @return Nothing
-     * @throws Nothing
-     */
-    public void setOrganism (String pOrganism) { organism = pOrganism; }
-
-    /**
      * Set the segmentType attribute of this object to the given value.
      * @assumes Nothing
      * @effects Nothing
@@ -256,16 +218,6 @@ public class RDRCloneObject
      * @throws Nothing
      */
     public void setSegmentType (String pSegmentType) { segmentType = pSegmentType; }
-
-    /**
-     * Set the derivedFromID attribute of this object to the given value.
-     * @assumes Nothing
-     * @effects Nothing
-     * @param pDerivedFromID value to set the attribute to
-     * @return Nothing
-     * @throws Nothing
-     */
-    public void setDerivedFromID (String pDerivedFromID) { derivedFromID = pDerivedFromID; }
 
     /**
      * Set the vectorType attribute of this object to the given value.
@@ -320,6 +272,9 @@ public class RDRCloneObject
 
 
 //  $Log$
+//  Revision 1.2  2003/05/13 18:49:05  dbm
+//  Fixed javadocs
+//
 //  Revision 1.1  2003/05/08 19:13:14  dbm
 //  Renamed from RDRDBObject.java
 //
