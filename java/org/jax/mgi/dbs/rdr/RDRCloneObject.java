@@ -68,6 +68,10 @@ public class RDRCloneObject
     //
     protected String logicalDBSeq;
 
+    // The value for the private column in the RADAR database.
+    //
+    protected String privateAcc;
+
 
     /**
      * Get the Clone_key attribute from this object.
@@ -170,6 +174,16 @@ public class RDRCloneObject
     public String getLogicalDBSeq () { return logicalDBSeq; }
 
     /**
+     * Get the privateAcc attribute from this object.
+     * @assumes Nothing
+     * @effects Nothing
+     * @param None
+     * @return The privateAcc attribute
+     * @throws Nothing
+     */
+    public String getPrivateAcc () { return privateAcc; }
+
+    /**
      * Set the Clone_key attribute of this object to the given value.
      * @assumes Nothing
      * @effects Nothing
@@ -268,10 +282,23 @@ public class RDRCloneObject
      * @throws Nothing
      */
     public void setLogicalDBSeq (String pLogicalDBSeq) { logicalDBSeq = pLogicalDBSeq; }
+
+    /**
+     * Set the privateAcc attribute of this object to the given value.
+     * @assumes Nothing
+     * @effects Nothing
+     * @param pPrivateAcc value to set the attribute to
+     * @return Nothing
+     * @throws Nothing
+     */
+    public void setPrivateAcc (String pPrivateAcc) { privateAcc = pPrivateAcc; }
 }
 
 
 //  $Log$
+//  Revision 1.3  2003/06/25 17:00:26  dbm
+//  Removed support for organism and derivedFromID.
+//
 //  Revision 1.2  2003/05/13 18:49:05  dbm
 //  Fixed javadocs
 //
