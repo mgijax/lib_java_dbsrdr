@@ -33,32 +33,6 @@ public class CloneLoadCfg extends Configurator
     }
 
     /**
-     * Get the value of the SEGMENT_TYPE configuration parameter.
-     * @assumes Nothing
-     * @effects Nothing
-     * @param None
-     * @return The configuration value
-     * @throws ConfigException if the value is not found
-     */
-    public String getSegmentType () throws ConfigException
-    {
-        return getConfigString("SEGMENT_TYPE");
-    }
-
-    /**
-     * Get the value of the VECTOR_TYPE configuration parameter.
-     * @assumes Nothing
-     * @effects Nothing
-     * @param None
-     * @return The configuration value
-     * @throws ConfigException if the value is not found
-     */
-    public String getVectorType () throws ConfigException
-    {
-        return getConfigString("VECTOR_TYPE");
-    }
-
-    /**
      * Get the value of the J_NUMBER configuration parameter.
      * @assumes Nothing
      * @effects Nothing
@@ -113,6 +87,9 @@ public class CloneLoadCfg extends Configurator
 
 
 //  $Log$
+//  Revision 1.5  2003/07/07 16:26:36  dbm
+//  Added get method for PRIVATE_ACC.
+//
 //  Revision 1.4  2003/06/25 16:59:18  dbm
 //  Removed get methods for ORGANISM and DERIVED_FROM_ID.
 //
