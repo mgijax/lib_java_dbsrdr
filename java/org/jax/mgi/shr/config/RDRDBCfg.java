@@ -44,61 +44,107 @@ public class RDRDBCfg
         cm = ConfigurationManager.getInstance();
     }
 
-    // Methods to get RADAR database configuration parameters for the
-    // MGI clone table.
-    //
+
+    /**
+     * Get the name of the MGI clone table from the configuration file.
+     */
     public String getMGICloneTable() throws KnownException
     {
         return ConfigLookup.getConfigString("MGI_CLONE_TABLE",cm);
     }
+
+    /**
+     * Get the configuration value that indicates if the MGI clone table
+     * should be truncated before loading the bcp file.
+     */
     public boolean getMGICloneBCPTruncTable() throws KnownException
     {
         return ConfigLookup.getConfigBoolean("MGI_CLONE_BCP_TRUNCATE_TABLE",cm);
     }
+
+    /**
+     * Get the configuration value that indicates if the indexes on the
+     * MGI clone table should be dropped before loading the bcp file.
+     */
     public boolean getMGICloneBCPDropIndex() throws KnownException
     {
         return ConfigLookup.getConfigBoolean("MGI_CLONE_BCP_DROP_INDEXES",cm);
     }
+
+    /**
+     * Get the configuration value that indicates if the transaction log
+     * should be truncated after loading the bcp file into the MGI clone
+     * table.
+     */
     public boolean getMGICloneBCPTruncLog() throws KnownException
     {
         return ConfigLookup.getConfigBoolean("MGI_CLONE_BCP_TRUNCATE_LOG",cm);
     }
 
-    // Methods to get RADAR database configuration parameters for the
-    // MGI clone sequence table.
-    //
+    /**
+     * Get the name of the MGI clone sequence table from the configuration
+     * file.
+     */
     public String getMGICloneSeqTable() throws KnownException
     {
         return ConfigLookup.getConfigString("MGI_CLONE_SEQ_TABLE",cm);
     }
+
+    /**
+     * Get the configuration value that indicates if the MGI clone sequence
+     * table should be truncated before loading the bcp file.
+     */
     public boolean getMGICloneSeqBCPTruncTable() throws KnownException
     {
         return ConfigLookup.getConfigBoolean("MGI_CLONE_SEQ_BCP_TRUNCATE_TABLE",cm);
     }
+
+    /**
+     * Get the configuration value that indicates if the indexes on the
+     * MGI clone sequence table should be dropped before loading the bcp file.
+     */
     public boolean getMGICloneSeqBCPDropIndex() throws KnownException
     {
         return ConfigLookup.getConfigBoolean("MGI_CLONE_SEQ_BCP_DROP_INDEXES",cm);
     }
+
+    /**
+     * Get the configuration value that indicates if the transaction log
+     * should be truncated after loading the bcp file into the MGI clone
+     * sequence table.
+     */
     public boolean getMGICloneSeqBCPTruncLog() throws KnownException
     {
         return ConfigLookup.getConfigBoolean("MGI_CLONE_SEQ_BCP_TRUNCATE_LOG",cm);
     }
 
-    // Methods to get RADAR database configuration parameters for common
-    // table attributes.
-    //
+    /**
+     * Get the organism attribute from the configuration file.
+     */
     public String getOrganism() throws KnownException
     {
         return ConfigLookup.getConfigString("ORGANISM",cm);
     }
+
+    /**
+     * Get the dnaType attribute from the configuration file.
+     */
     public String getDNAType() throws KnownException
     {
         return ConfigLookup.getConfigString("DNA_TYPE",cm);
     }
+
+    /**
+     * Get the vectorType attribute from the configuration file.
+     */
     public String getVectorType() throws KnownException
     {
         return ConfigLookup.getConfigString("VECTOR_TYPE",cm);
     }
+
+    /**
+     * Get the jNumber attribute from the configuration file.
+     */
     public String getJNumber() throws KnownException
     {
         return ConfigLookup.getConfigString("J_NUMBER",cm);

@@ -26,7 +26,7 @@ public class RDRDBObject extends MGIDBObject
     //  Variables  //
     /////////////////
 
-    // RADAR database specific values.
+    // RADAR database specific attributes.
     //
     protected String organism;
     protected String dnaType;
@@ -45,17 +45,44 @@ public class RDRDBObject extends MGIDBObject
     {
     }
 
-    // Methods to get attributes from this object.
-    //
+
+    /**
+     * Get the organism attribute from this object.
+     */
     public String getOrganism () { return organism; }
+
+    /**
+     * Get the dnaType attribute from this object.
+     */
     public String getDNAType () { return dnaType; }
+
+    /**
+     * Get the vectorType attribute from this object.
+     */
     public String getVectorType () { return vectorType; }
+
+    /**
+     * Get the jNumber attribute from this object.
+     */
     public String getJNumber () { return jNumber; }
 
-    // Methods to set attributes in this object.
-    //
+    /**
+     * Set the organism attribute of this object to the given value.
+     */
     public void setOrganism (String pOrganism) { organism = pOrganism; }
+
+    /**
+     * Set the dnaType attribute of this object to the given value.
+     */
     public void setDNAType (String pDNAType) { dnaType = pDNAType; }
+
+    /**
+     * Set the vectorType attribute of this object to the given value.
+     */
     public void setVectorType (String pVectorType) { vectorType = pVectorType; }
+
+    /**
+     * Set the jNumber attribute of this object to the given value.
+     */
     public void setJNumber (String pJNumber) { jNumber = pJNumber; }
 }
