@@ -8,7 +8,6 @@ QC_cDNALoad_CloneID_Unknown
 QC_cDNALoad_Library_Discrep
 QC_cDNALoad_Library_Missing
 QC_cDNALoad_Library_No_Parent
-QC_cDNALoad_MGI_IMAGE_Discrep
 QC_CloneLoad_DupClone
 QC_CloneLoad_DupSeq
 QC_CloneLoad_MultiClone
