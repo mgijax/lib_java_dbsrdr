@@ -3,14 +3,12 @@
 
 package org.jax.mgi.shr.config;
 
-import org.jax.mgi.shr.exception.KnownException;
-
 /**
  * <p>IS: An object that is used to retrieve RADAR database specific
  *        configuration parameters.</p>
  * <p>HAS:
  * <UL>
- *   <LI> Configuration manager object
+ *   <LI> A reference to a configuration manager
  * </UL></p>
  * <p>DOES:
  * <UL>
@@ -23,179 +21,197 @@ import org.jax.mgi.shr.exception.KnownException;
  * @version 1.0
  */
 
-public class RDRDBCfg
+public class RDRDBCfg extends Configurator
 {
-    /////////////////
-    //  Variables  //
-    /////////////////
-
-    // An instance of a configuration manager.
-    //
-    private ConfigurationManager cm = null;
-
-
     /**
-     * <p>Purpose: Constructs a RADAR database object configurator and gets
-     *             an instance of a configuration manager.</p>
+     * <p>Purpose: Constructs a RADAR database object configurator.</p>
      * <p>Assumes: Nothing</p>
      * <p>Effects: Nothing</p>
      * @param None
-     * @exception KnownException
+     * @exception ConfigException
      */
-    public RDRDBCfg () throws KnownException
+    public RDRDBCfg () throws ConfigException
     {
-        cm = ConfigurationManager.getInstance();
+        super();
     }
 
 
     /**
      * Get the name of the MGI clone table from the configuration file.
      */
-    public String getMGICloneTable () throws KnownException
+    public String getMGICloneTable () throws ConfigException
     {
-        return ConfigLookup.getConfigString("MGI_CLONE_TABLE",cm);
+        return getConfigString("MGI_CLONE_TABLE");
     }
 
     /**
      * Get the SQL statement(s) to be executed before a bcp file is loaded
      * into the MGI clone table.
      */
-    public String getMGICloneBCPPreSQL () throws KnownException
+    public String getMGICloneBCPPreSQL () throws ConfigException
     {
-        return ConfigLookup.getConfigString("MGI_CLONE_BCP_PRE_SQL","",cm);
+        return getConfigString("MGI_CLONE_BCP_PRE_SQL","");
     }
 
     /**
      * Get the SQL statement(s) to be executed after a bcp file is loaded
      * into the MGI clone table.
      */
-    public String getMGICloneBCPPostSQL () throws KnownException
+    public String getMGICloneBCPPostSQL () throws ConfigException
     {
-        return ConfigLookup.getConfigString("MGI_CLONE_BCP_POST_SQL","",cm);
+        return getConfigString("MGI_CLONE_BCP_POST_SQL","");
     }
 
     /**
      * Get the configuration value that indicates if the MGI clone table
-     * should be truncated before loading the bcp file.
+     * should be truncated before loading the bcp file.  The default is
+     * false.
      */
-    public boolean getMGICloneBCPTruncTable () throws KnownException
+    public boolean getMGICloneBCPTruncTable () throws ConfigException
     {
-        return ConfigLookup.getConfigBoolean("MGI_CLONE_BCP_TRUNCATE_TABLE",cm);
+        return getConfigBoolean("MGI_CLONE_BCP_TRUNCATE_TABLE",new Boolean(false)).booleanValue();
     }
 
     /**
      * Get the configuration value that indicates if the indexes on the
-     * MGI clone table should be dropped before loading the bcp file.
+     * MGI clone table should be dropped before loading the bcp file.  The
+     * default is false.
      */
-    public boolean getMGICloneBCPDropIndex () throws KnownException
+    public boolean getMGICloneBCPDropIndex () throws ConfigException
     {
-        return ConfigLookup.getConfigBoolean("MGI_CLONE_BCP_DROP_INDEXES",cm);
+        return getConfigBoolean("MGI_CLONE_BCP_DROP_INDEXES",new Boolean(false)).booleanValue();
     }
 
     /**
      * Get the name of the MGI clone accession table from the configuration
      * file.
      */
-    public String getMGICloneAccTable () throws KnownException
+    public String getMGICloneAccTable () throws ConfigException
     {
-        return ConfigLookup.getConfigString("MGI_CLONE_ACC_TABLE",cm);
+        return getConfigString("MGI_CLONE_ACC_TABLE");
     }
 
     /**
      * Get the SQL statement(s) to be executed before a bcp file is loaded
      * into the MGI clone accession table.
      */
-    public String getMGICloneAccBCPPreSQL () throws KnownException
+    public String getMGICloneAccBCPPreSQL () throws ConfigException
     {
-        return ConfigLookup.getConfigString("MGI_CLONE_ACC_BCP_PRE_SQL","",cm);
+        return getConfigString("MGI_CLONE_ACC_BCP_PRE_SQL","");
     }
 
     /**
      * Get the SQL statement(s) to be executed after a bcp file is loaded
      * into the MGI clone accession table.
      */
-    public String getMGICloneAccBCPPostSQL () throws KnownException
+    public String getMGICloneAccBCPPostSQL () throws ConfigException
     {
-        return ConfigLookup.getConfigString("MGI_CLONE_ACC_BCP_POST_SQL","",cm);
+        return getConfigString("MGI_CLONE_ACC_BCP_POST_SQL","");
     }
 
     /**
      * Get the configuration value that indicates if the MGI clone accession
-     * table should be truncated before loading the bcp file.
+     * table should be truncated before loading the bcp file.  The default
+     * is false.
      */
-    public boolean getMGICloneAccBCPTruncTable () throws KnownException
+    public boolean getMGICloneAccBCPTruncTable () throws ConfigException
     {
-        return ConfigLookup.getConfigBoolean("MGI_CLONE_ACC_BCP_TRUNCATE_TABLE",cm);
+        return getConfigBoolean("MGI_CLONE_ACC_BCP_TRUNCATE_TABLE",new Boolean(false)).booleanValue();
     }
 
     /**
      * Get the configuration value that indicates if the indexes on the
-     * MGI clone accession table should be dropped before loading the bcp file.
+     * MGI clone accession table should be dropped before loading the bcp
+     * file.  The default is false.
      */
-    public boolean getMGICloneAccBCPDropIndex () throws KnownException
+    public boolean getMGICloneAccBCPDropIndex () throws ConfigException
     {
-        return ConfigLookup.getConfigBoolean("MGI_CLONE_ACC_BCP_DROP_INDEXES",cm);
+        return getConfigBoolean("MGI_CLONE_ACC_BCP_DROP_INDEXES",new Boolean(false)).booleanValue();
     }
 
     /**
      * Get the organism attribute from the configuration file.
      */
-    public String getOrganism () throws KnownException
+    public String getOrganism () throws ConfigException
     {
-        return ConfigLookup.getConfigString("ORGANISM",cm);
+        setApplyPrefix(false);
+        String value = getConfigString("ORGANISM");
+        setApplyPrefix(true);
+        return value;
     }
 
     /**
      * Get the segmentType attribute from the configuration file.
      */
-    public String getSegmentType () throws KnownException
+    public String getSegmentType () throws ConfigException
     {
-        return ConfigLookup.getConfigString("SEGMENT_TYPE",cm);
+        setApplyPrefix(false);
+        String value = getConfigString("SEGMENT_TYPE");
+        setApplyPrefix(true);
+        return value;
     }
 
     /**
      * Get the derivedFromID attribute from the configuration file.
      */
-    public String getDerivedFromID () throws KnownException
+    public String getDerivedFromID () throws ConfigException
     {
-        return ConfigLookup.getConfigString("DERIVED_FROM_ID",cm);
+        setApplyPrefix(false);
+        String value = getConfigString("DERIVED_FROM_ID");
+        setApplyPrefix(true);
+        return value;
     }
 
     /**
      * Get the vectorType attribute from the configuration file.
      */
-    public String getVectorType () throws KnownException
+    public String getVectorType () throws ConfigException
     {
-        return ConfigLookup.getConfigString("VECTOR_TYPE",cm);
+        setApplyPrefix(false);
+        String value = getConfigString("VECTOR_TYPE");
+        setApplyPrefix(true);
+        return value;
     }
 
     /**
      * Get the jNumber attribute from the configuration file.
      */
-    public String getJNumber () throws KnownException
+    public String getJNumber () throws ConfigException
     {
-        return ConfigLookup.getConfigString("J_NUMBER",cm);
+        setApplyPrefix(false);
+        String value = getConfigString("J_NUMBER");
+        setApplyPrefix(true);
+        return value;
     }
 
     /**
      * Get the logicalDB attribute for a clone from the configuration file.
      */
-    public String getLogicalDBClone () throws KnownException
+    public String getLogicalDBClone () throws ConfigException
     {
-        return ConfigLookup.getConfigString("LOGICAL_DB_CLONE",cm);
+        setApplyPrefix(false);
+        String value = getConfigString("LOGICAL_DB_CLONE");
+        setApplyPrefix(true);
+        return value;
     }
 
     /**
      * Get the logicalDB attribute for a sequence from the configuration file.
      */
-    public String getLogicalDBSeq () throws KnownException
+    public String getLogicalDBSeq () throws ConfigException
     {
-        return ConfigLookup.getConfigString("LOGICAL_DB_SEQ",cm);
+        setApplyPrefix(false);
+        String value = getConfigString("LOGICAL_DB_SEQ");
+        setApplyPrefix(true);
+        return value;
     }
 }
 
 
 //  $Log$
+//  Revision 1.3  2003/04/15 18:44:09  dbm
+//  Changes per design review
+//
 /**************************************************************************
 *
 * Warranty Disclaimer and Copyright Notice

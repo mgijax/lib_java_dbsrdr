@@ -6,8 +6,8 @@ package org.jax.mgi.dbs.rdr;
 import java.util.Vector;
 import java.util.StringTokenizer;
 
+import org.jax.mgi.shr.config.ConfigException;
 import org.jax.mgi.shr.config.RDRDBCfg;
-import org.jax.mgi.shr.exception.KnownException;
 
 /**
  * <p>IS: An object that knows how to get SQL commands to run against
@@ -43,9 +43,9 @@ public class RDRDBSQL
      * <p>Assumes: Nothing</p>
      * <p>Effects: Nothing</p>
      * @param None
-     * @exception None
+     * @exception ConfigException
      */
-    public RDRDBSQL () throws KnownException
+    public RDRDBSQL () throws ConfigException
     {
         RDRCfg = new RDRDBCfg();
     }
@@ -62,9 +62,9 @@ public class RDRDBSQL
      * @param None
      * @return A vector of SQL statements or an empty vector if none
      *         are found.
-     * @exception KnownException
+     * @exception ConfigException
      */
-    public Vector getMGICloneBCPPreSQL () throws KnownException
+    public Vector getMGICloneBCPPreSQL () throws ConfigException
     {
         return buildSQLVector(RDRCfg.getMGICloneBCPPreSQL());
     }
@@ -81,9 +81,9 @@ public class RDRDBSQL
      * @param None
      * @return A vector of SQL statements or an empty vector if none
      *         are found.
-     * @exception KnownException
+     * @exception ConfigException
      */
-    public Vector getMGICloneBCPPostSQL () throws KnownException
+    public Vector getMGICloneBCPPostSQL () throws ConfigException
     {
         return buildSQLVector(RDRCfg.getMGICloneBCPPostSQL());
     }
@@ -100,9 +100,9 @@ public class RDRDBSQL
      * @param None
      * @return A vector of SQL statements or an empty vector if none
      *         are found.
-     * @exception KnownException
+     * @exception ConfigException
      */
-    public Vector getMGICloneAccBCPPreSQL () throws KnownException
+    public Vector getMGICloneAccBCPPreSQL () throws ConfigException
     {
         return buildSQLVector(RDRCfg.getMGICloneAccBCPPreSQL());
     }
@@ -119,9 +119,9 @@ public class RDRDBSQL
      * @param None
      * @return A vector of SQL statements or an empty vector if none
      *         are found.
-     * @exception KnownException
+     * @exception ConfigException
      */
-    public Vector getMGICloneAccBCPPostSQL () throws KnownException
+    public Vector getMGICloneAccBCPPostSQL () throws ConfigException
     {
         return buildSQLVector(RDRCfg.getMGICloneAccBCPPostSQL());
     }
@@ -156,6 +156,9 @@ public class RDRDBSQL
 
 
 //  $Log$
+//  Revision 1.1  2003/04/15 18:45:30  dbm
+//  New
+//
 /**************************************************************************
 *
 * Warranty Disclaimer and Copyright Notice
