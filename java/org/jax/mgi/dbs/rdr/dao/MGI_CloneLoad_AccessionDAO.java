@@ -155,7 +155,7 @@ public class MGI_CloneLoad_AccessionDAO extends DAO
             v.add(state.getCloneKey());
             v.add(state.getAccID());
             v.add(state.getLogicalDB());
-            v.add(state.getPrivateJ());
+            v.add(state.getPrivateVal());
         }
 
         // Return the vector.
@@ -211,6 +211,9 @@ public class MGI_CloneLoad_AccessionDAO extends DAO
 
 
 //  $Log$
+//  Revision 1.1  2003/10/15 15:42:05  dbm
+//  Initial version
+//
 //
 /**************************************************************************
 *

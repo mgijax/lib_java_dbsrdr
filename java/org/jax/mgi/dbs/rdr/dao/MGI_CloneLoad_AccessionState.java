@@ -33,7 +33,7 @@ public class MGI_CloneLoad_AccessionState
     private Integer _Clone_key = null;
     private String accID = null;
     private String logicalDB = null;
-    private Boolean privateJ = null;
+    private Boolean privateVal = null;
     private Integer _JobStream_key = null;
     private Timestamp creation_date = null;
 
@@ -81,14 +81,14 @@ public class MGI_CloneLoad_AccessionState
     public String getLogicalDB () { return logicalDB; }
 
     /**
-     * Get the privateJ attribute from this object.
+     * Get the privateVal attribute from this object.
      * @assumes Nothing
      * @effects Nothing
      * @param None
-     * @return The privateJ attribute.
+     * @return The privateVal attribute.
      * @throws Nothing
      */
-    public Boolean getPrivateJ () { return privateJ; }
+    public Boolean getPrivateVal () { return privateVal; }
 
     /**
      * Get the _JobStream_key attribute from this object.
@@ -141,14 +141,14 @@ public class MGI_CloneLoad_AccessionState
     public void setLogicalDB (String in) { logicalDB = in; }
 
     /**
-     * Set the privateJ attribute of this object to the given value.
+     * Set the privateVal attribute of this object to the given value.
      * @assumes Nothing
      * @effects Nothing
      * @param in The value to set the attribute to.
      * @return Nothing
      * @throws Nothing
      */
-    public void setPrivateJ (Boolean in) { privateJ = in; }
+    public void setPrivateVal (Boolean in) { privateVal = in; }
 
     /**
      * Set the _JobStream_key attribute of this object to the given value.
@@ -184,7 +184,7 @@ public class MGI_CloneLoad_AccessionState
         _Clone_key = null;
         accID = null;
         logicalDB = null;
-        privateJ = null;
+        privateVal = null;
         _JobStream_key = null;
         creation_date = null;
     }
@@ -192,6 +192,9 @@ public class MGI_CloneLoad_AccessionState
 
 
 //  $Log$
+//  Revision 1.1  2003/10/15 15:42:06  dbm
+//  Initial version
+//
 //
 /**************************************************************************
 *
