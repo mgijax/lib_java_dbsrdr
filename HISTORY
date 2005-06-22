@@ -1,3 +1,10 @@
+TAG: lib_java_dbsrdr-snp-BP
+DATE: 06/22/2005
+STAFF: sc
+RELEASE: development
+CHANGES: snp BP tag (tr1560) didn't use the tr# because the snp prototype had
+ used this branch name and was then moved to a new TR.
+
 TAG: lib_java_dbsrdr-tr6046-BP
 DATE: 04/07/2005
 STAFF: mbw
