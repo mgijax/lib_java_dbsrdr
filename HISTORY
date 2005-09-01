@@ -1,3 +1,9 @@
+TAG: lib_java_dbsrdr-snp-1
+DATE: 06/22/2005
+STAFF: sc
+RELEASE: development
+CHANGES: added MGI_SNP tables to generatedTables.txt
+
 TAG: lib_java_dbsrdr-snp-BP
 DATE: 06/22/2005
 STAFF: sc
