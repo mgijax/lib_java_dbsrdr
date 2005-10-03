@@ -1,3 +1,9 @@
+DATE: 10/03/2005
+STAFF: sc
+RELEASE: development
+CHANGES: build.properties.default - removed install.dir
+         and updated dbpasswordfile with 'live'
+
 TAG: lib_java_dbsrdr-snp-1
 DATE: 06/22/2005
 STAFF: sc
