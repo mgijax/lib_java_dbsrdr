@@ -1,8 +1,28 @@
+TAG: lib_java_dbsrdr-3-4-0-0
+DATE: 10/12/2005
+STAFF: sc
+RELEASE: development
+CHANGES: 
+1) merged changes from snp branch
+
 TAG: lib_java_dbsrdr-tr7048-BP
 DATE: 08/28/2005
 STAFF: mbw
 RELEASE: development
 CHANGES: frameworks documentation
+
+TAG: lib_java_dbsrdr-snp-2
+DATE: 10/12/2005
+STAFF: sc
+RELEASE: development
+CHANGES: build.properties.default - removed install.dir
+         and updated dbpasswordfile with 'live'
+
+TAG: lib_java_dbsrdr-snp-1
+DATE: 06/22/2005
+STAFF: sc
+RELEASE: development
+CHANGES: added MGI_SNP tables to generatedTables.txt
 
 TAG: lib_java_dbsrdr-snp-BP
 DATE: 06/22/2005
