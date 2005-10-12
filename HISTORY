@@ -1,4 +1,5 @@
-DATE: 10/03/2005
+TAG: lib_java_dbsrdr-snp-2
+DATE: 10/12/2005
 STAFF: sc
 RELEASE: development
 CHANGES: build.properties.default - removed install.dir
