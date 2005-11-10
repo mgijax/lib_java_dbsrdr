@@ -1,3 +1,9 @@
+TAG: lib_java_dbsrdr-tr7067-1
+DATE: 11/10/2005
+STAFF: mbw
+RELEASE: development
+CHANGES: modified build.properties.default for jconnect upgrade
+
 TAG: lib_java_dbsrdr-tr7067-BP
 DATE: 11/10/2005
 STAFF: mbw
