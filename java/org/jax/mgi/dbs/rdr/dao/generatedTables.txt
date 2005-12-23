@@ -24,6 +24,9 @@ QC_CloneLoad_DupSeq
 QC_CloneLoad_MultiClone
 QC_CloneLoad_NonClone
 QC_CloneLoad_SeqOnly
+QC_IMSR_StrainsWithIllOrNoMut
+QC_IMSR_StrainsWithIllOrNoStat
+QC_IMSR_StrainsWithIllOrNoType
 QC_MS_AttrEdit
 QC_MS_NameConflict
 QC_MS_UnresolvedOrganism
