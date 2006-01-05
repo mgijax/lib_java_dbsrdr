@@ -1,3 +1,9 @@
+TAG: lib_java_dbsrdr-3-4-0-2
+DATE: 1/5/2006
+STAFF: dow
+CHANGES: 
+1) Added MGI_IMSR and DP_IMSR into generated text.
+
 TAG: lib_java_dbsrdr-3-4-0-1
 DATE: 12/23/2005
 STAFF: dow
