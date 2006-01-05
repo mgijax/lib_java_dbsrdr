@@ -1,9 +1,11 @@
+DP_IMSR
 DP_MGC_Clones
 DP_RPCI_Clones
 GB_EST_Reload
 MGI_Association
 MGI_CloneLoad_Accession
 MGI_CloneLoad_Clone
+MGI_IMSR
 MGI_SNP_ConsensusSNP
 MGI_SNP_SubSNP
 MGI_SNP_Accession
