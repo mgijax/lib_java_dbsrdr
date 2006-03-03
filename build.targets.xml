@@ -1,21 +1,24 @@
-  <target name="gen.code" description="Generates schema specific source code">
-    <java classname="org.jax.mgi.shr.dbutils.cg.RADARGen"
-	  classpath="${classpath}"
-	  fork="true" dir="${src.dir}">
-	<jvmarg value="-DDBNAME=${dbname}"/>
-	<jvmarg value="-DDBSERVER=${dbserver}"/>
-	<jvmarg value="-DDBUSER=${dbuser}"/>
-	<jvmarg value="-DDBPASSWORDFILE=${dbpasswordfile}"/>
-        <jvmarg value="-DDBURL=${dburl}"/>
-    </java>
-  </target>
+<?xml version="1.0"?>
+<project name="build.targets" basedir=".">
+   <target name="gen.code" description="Generates schema specific source code">
+      <java classname="org.jax.mgi.shr.dbutils.cg.RADARGen"
+            classpath="${classpath}"
+            fork="true" dir="${src.dir}">
+         <jvmarg value="-DDBSERVER=${env.RADAR_DBSERVER}"/>
+         <jvmarg value="-DDBNAME=${env.RADAR_DBNAME}"/>
+         <jvmarg value="-DDBUSER=${env.RADAR_DBUSER}"/>
+         <jvmarg value="-DDBPASSWORDFILE=${env.RADAR_DBPASSWORDFILE}"/>
+         <jvmarg value="-DDBURL=${env.RADAR_DBURL}"/>
+      </java>
+   </target>
 
-  <target name="clean.code" description="Removed code generated sourec files">
-    <delete>
-      <fileset dir="${src.dir}/org/jax/mgi/dbs/rdr/dao" includes="*.java"/>
-    </delete>
-  </target>
+   <target name="clean.code" description="Removed code generated sourec files">
+      <delete>
+         <fileset dir="${src.dir}/org/jax/mgi/dbs/rdr/dao" includes="*.java"/>
+      </delete>
+   </target>
 
-  <target name="buildall" description="Executes task 'gen.code' and 'all'"
-	  depends="gen.code, all">
-  </target>
+   <target name="buildall" description="Executes task 'gen.code' and 'all'"
+           depends="gen.code, all, link">
+   </target>
+</project>
