@@ -6,13 +6,6 @@ MGI_Association
 MGI_CloneLoad_Accession
 MGI_CloneLoad_Clone
 MGI_IMSR
-MGI_SNP_ConsensusSNP
-MGI_SNP_SubSNP
-MGI_SNP_Accession
-MGI_SNP_Coordinate
-MGI_SNP_Marker
-MGI_SNP_StrainAllele
-MGI_SNP_Flank
 QC_AssocLoad_Assoc_Discrep
 QC_AssocLoad_Target_Discrep
 QC_cDNALoad_CloneID_Discrep
