@@ -1,8 +1,15 @@
+TAG: lib_java_dbsrdr-3-4-4-1
+DATE: 4/6/2006
+STAFF: sc
+RELEASE: MGI3.44
+CHANGES: merge of tr7203 branch to trunk
+
 TAG: lib_java_dbsrdr-tr6594-BP
 DATE: 3/2/2006
 STAFF: dbm
 CHANGES: Branch point tag for configuration changes
 
+TAG: lib_java_dbsrdr-tr7203-1
 TAG: lib_java_dbsrdr-tr7203-BP
 DATE: 1/10/2006
 STAFF: sc
