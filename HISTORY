@@ -1,3 +1,9 @@
+TAG: lib_java_dbsrdr-3-5-0-1
+DATE: 4/28/2006
+STAFF: sc
+RELEASE: MGI3.5
+CHANGES: merge tr7067 branch to trunk
+
 TAG: lib_java_dbsrdr-3-4-4-1
 DATE: 4/6/2006
 STAFF: sc
@@ -34,6 +40,12 @@ DATE: 12/13/2005
 STAFF: dow
 RELEASE: IMSR Backend release
 CHANGES: branch point tag for IMSR Backend release
+
+TAG: lib_java_dbsrdr-tr7067-1
+DATE: 11/10/2005
+STAFF: mbw
+RELEASE: development
+CHANGES: modified build.properties.default for jconnect upgrade
 
 TAG: lib_java_dbsrdr-tr7067-BP
 DATE: 11/10/2005
