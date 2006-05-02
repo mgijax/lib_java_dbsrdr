@@ -1,3 +1,9 @@
+TAG: lib_java_dbsrdr-3-5-0-2
+DATE: 5/2/2006
+STAFF: dbm
+CHANGES:
+1) Merge configuration changes from tr6549 branch
+
 TAG: lib_java_dbsrdr-3-5-0-1
 DATE: 4/28/2006
 STAFF: sc
@@ -9,6 +15,21 @@ DATE: 4/6/2006
 STAFF: sc
 RELEASE: MGI3.44
 CHANGES: merge of tr7203 branch to trunk
+
+TAG: lib_java_dbsrdr-tr6594-3
+DATE: 3/27/2006
+STAFF: dbm
+CHANGES: Consolidate build scripts
+
+TAG: lib_java_dbsrdr-tr6594-2
+DATE: 3/8/2006
+STAFF: dbm
+CHANGES: Fixed bug in build.targets.xml
+
+TAG: lib_java_dbsrdr-tr6594-1
+DATE: 3/7/2006
+STAFF: dbm
+CHANGES: Initial tag for testing installation
 
 TAG: lib_java_dbsrdr-tr6594-BP
 DATE: 3/2/2006
