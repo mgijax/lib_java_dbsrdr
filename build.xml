@@ -20,11 +20,11 @@
       <java classname="org.jax.mgi.shr.dbutils.cg.RADARGen"
             classpath="${classpath}"
             fork="true" failonerror="true" dir="${src.dir}">
-         <jvmarg value="-DDBSERVER=${env.RADAR_DBSERVER}"/>
-         <jvmarg value="-DDBNAME=${env.RADAR_DBNAME}"/>
-         <jvmarg value="-DDBUSER=${env.RADAR_DBUSER}"/>
-         <jvmarg value="-DDBPASSWORDFILE=${env.RADAR_DBPASSWORDFILE}"/>
-         <jvmarg value="-DDBURL=${env.RADAR_DBURL}"/>
+         <jvmarg value="-DDBSERVER=${env.MGD_DBSERVER}"/>
+         <jvmarg value="-DDBNAME=${env.MGD_DBNAME}"/>
+         <jvmarg value="-DDBUSER=${env.MGD_DBUSER}"/>
+         <jvmarg value="-DDBPASSWORDFILE=${env.PG_1LINE_PASSFILE}"/>
+         <jvmarg value="-DDBURL=${env.MGD_DBSERVER}"/>
       </java>
    </target>
 
