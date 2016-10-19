@@ -1,0 +1,7 @@
+Configuration
+dbsrdr.jar
+java/org/jax/mgi/dbs/rdr/RADAR.java
+java/org/jax/mgi/dbs/rdr/dao/*.java
+java/velocity.log
+classes/
+javadocs/
